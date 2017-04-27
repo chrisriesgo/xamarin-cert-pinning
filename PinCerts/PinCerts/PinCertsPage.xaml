@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:PinCerts" 
+	x:Class="PinCerts.PinCertsPage"
+	Title="{Binding Title}">
+	
+	<ContentPage.BindingContext>
+		<local:PinCertsViewModel/>
+	</ContentPage.BindingContext>
+	
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Again" Clicked="LoadData" />
+	</ContentPage.ToolbarItems>
+	
+	<StackLayout VerticalOptions="Center" HorizontalOptions="Center" Margin="64">
+		<Label Text="Data from an SSL endpoint" HorizontalTextAlignment="Center" TextColor="Navy" />
+		<Label Text="{Binding Data}" HorizontalTextAlignment="Center" />
+	</StackLayout>
+	
+</ContentPage>
