@@ -10,6 +10,8 @@ namespace PinCerts
 		{
 			InitializeComponent();
 
+			SslValidator.Initialize();
+
 			MainPage = new NavigationPage(new PinCertsPage());
 		}
 

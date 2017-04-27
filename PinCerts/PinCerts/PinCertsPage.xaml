@@ -11,7 +11,8 @@
 	</ContentPage.BindingContext>
 	
 	<ContentPage.ToolbarItems>
-		<ToolbarItem Text="Again" Clicked="LoadData" />
+		<ToolbarItem Text="Fail" Clicked="FailData" />
+		<ToolbarItem Text="Pass" Clicked="LoadData" />
 	</ContentPage.ToolbarItems>
 	
 	<StackLayout VerticalOptions="Center" HorizontalOptions="Center" Margin="64">

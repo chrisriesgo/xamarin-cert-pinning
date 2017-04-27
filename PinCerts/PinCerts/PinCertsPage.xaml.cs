@@ -22,9 +22,14 @@ namespace PinCerts
 			FetchData();
 		}
 		
-		async void FetchData()
+		void FailData(object sender, System.EventArgs e)
 		{
-			await ViewModel.FetchData().ConfigureAwait(false);
+			FetchData(forceFailure:true);
+		}
+		
+		async void FetchData(bool forceFailure = false)
+		{
+			await ViewModel.FetchData(forceFailure);
 		}
 	}
 }

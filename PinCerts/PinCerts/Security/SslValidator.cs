@@ -18,7 +18,8 @@ namespace PinCerts
         static bool OnValidateCertificate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
         {
 			var certPublicString = certificate?.GetPublicKeyString();
-			return PUBLIC_KEY == certPublicString;
+			var keysMatch = PUBLIC_KEY == certPublicString;
+			return keysMatch;
         } 
     }
 }

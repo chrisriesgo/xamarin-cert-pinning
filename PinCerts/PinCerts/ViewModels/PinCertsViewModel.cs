@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using MvvmHelpers;
+using Xamarin.Forms;
 
 namespace PinCerts
 {
@@ -21,13 +22,15 @@ namespace PinCerts
 			_dataService = new DataService();
 		}
 
-		public async Task FetchData()
+		public async Task FetchData(bool forceFailure = false)
 		{
 			Data = "Loading...";
 			
 			// Artificial delay
 			await Task.Delay(1000);
-			Data = await _dataService.GetDataAsync();
+			Data = forceFailure 
+				? await _dataService.GetUnpinnedDataAsync() 
+				: await _dataService.GetPinnedDataAsync();
 		}
 	}
 }
