@@ -1,4 +1,4 @@
-# Xamarin Certificate and Public Key Pinning
+# Xamarin Certificate Public Key Pinning
 This is a Xamarin sample application that demonstrates certificate public key pinning. 
 
 > See [this OWASP page](https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning) for reference.
